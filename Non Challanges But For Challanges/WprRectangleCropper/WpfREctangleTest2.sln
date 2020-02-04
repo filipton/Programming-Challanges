@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfREctangleTest2", "WpfREctangleTest2\WpfREctangleTest2.csproj", "{7F3D3639-EFD3-46BD-BA79-8E64478D04EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F3D3639-EFD3-46BD-BA79-8E64478D04EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F3D3639-EFD3-46BD-BA79-8E64478D04EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F3D3639-EFD3-46BD-BA79-8E64478D04EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F3D3639-EFD3-46BD-BA79-8E64478D04EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87B124FD-2623-45FD-BA3C-672719D31F49}
+	EndGlobalSection
+EndGlobal
