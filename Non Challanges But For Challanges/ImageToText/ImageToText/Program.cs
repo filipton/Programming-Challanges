@@ -27,7 +27,7 @@ namespace ImageToText
 
             Console.WriteLine();
 
-            Console.WriteLine($"ENTER LINE FORMATING (eg. {LineFormat}):");
+            Console.WriteLine($"ENTER LINE FORMATING (eg. {LineFormat}) (LEAVE EMPTY IF SINGLE LINE DOESNT HAVE '-'):");
             LineFormat = Console.ReadLine();
 
 
@@ -72,7 +72,7 @@ namespace ImageToText
                     {
                         CleanBackgroundNoise = false,
                         EnhanceContrast = true,
-                        EnhanceResolution = false,
+                        EnhanceResolution = true,
                         Language = IronOcr.Languages.English.OcrLanguagePack,
                         Strategy = IronOcr.AdvancedOcr.OcrStrategy.Advanced,
                         ColorSpace = AdvancedOcr.OcrColorSpace.Color,
@@ -108,8 +108,15 @@ namespace ImageToText
                 {
                     if(!string.IsNullOrEmpty(line) && !string.IsNullOrWhiteSpace(line))
                     {
-                        string[] halfline = line.Split(new string[] { "-" }, 2, StringSplitOptions.None);
-                        final_text += LineFormat.Replace("{NUMBER}", halfline[0]).Replace("{CHALLANGE NAME}", halfline[1]) + Environment.NewLine;
+                        if(!string.IsNullOrEmpty(LineFormat))
+                        {
+                            string[] halfline = line.Split(new string[] { "-" }, 2, StringSplitOptions.None);
+                            final_text += LineFormat.Replace("{NUMBER}", halfline[0]).Replace("{CHALLANGE NAME}", halfline[1]) + Environment.NewLine;
+                        }
+                        else
+                        {
+                            final_text += line + Environment.NewLine;
+                        }
                     }
                 }
 
