@@ -20,9 +20,17 @@ namespace ImageToText
         public static void Main(string[] args)
         {
             string ImageFilePath = string.Empty;
+            string LineFormat = "{NUMBER} - {CHALLANGE NAME} </br>";
 
             Console.WriteLine("OUTPUT FILE NAME (WITH EXT.):");
             string OutputTextPath = Console.ReadLine();
+
+            Console.WriteLine();
+
+            Console.WriteLine($"ENTER LINE FORMATING (eg. {LineFormat}):");
+            LineFormat = Console.ReadLine();
+
+
             Thread.Sleep(1000);
             Console.Clear();
 
@@ -100,7 +108,8 @@ namespace ImageToText
                 {
                     if(!string.IsNullOrEmpty(line) && !string.IsNullOrWhiteSpace(line))
                     {
-                        final_text += line + Environment.NewLine;
+                        string[] halfline = line.Split(new string[] { "-" }, 2, StringSplitOptions.None);
+                        final_text += LineFormat.Replace("{NUMBER}", halfline[0]).Replace("{CHALLANGE NAME}", halfline[1]) + Environment.NewLine;
                     }
                 }
 
